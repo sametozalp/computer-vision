@@ -1,0 +1,5 @@
+    IMAGE-PROCESSING // GÖRÜNTÜ İŞLEME
+İçinde insan resmi olan bir png dosyamız olsun. 
+Bunu okumak, anlamak, işlemek ve yorumlamak adımlarının tamamına görüntü işleme denir.
+Processing matematiksel bir işlemdir. 
+Biz resmi görürüz ama bilgisayardaki karşılığı bir matristir.
