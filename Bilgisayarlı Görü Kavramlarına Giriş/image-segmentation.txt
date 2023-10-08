@@ -1,0 +1,2 @@
+    IMAGE SEGMENTATION // GÖRÜNTÜ BÖLÜTLEME
+Object detection'da bir insan resmi varsa bunu aşağı yukarı bir çerçeveye alır. Image segmentation'da ise görüntünün pixel bazında bulunur. İnsan hangi pixellerde var diye incelenir.

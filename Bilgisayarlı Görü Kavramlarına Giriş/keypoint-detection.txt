@@ -1,0 +1,2 @@
+    KEYPOINT DETECTION
+Bir insanın eklem noktalarını görüntü üzerinden çıkarmak istiyorsak kullanabiliriz.

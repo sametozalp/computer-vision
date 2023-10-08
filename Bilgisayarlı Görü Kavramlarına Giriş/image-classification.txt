@@ -3,3 +3,4 @@ Resimde bir insan varsa buna bir person etiketi ataması bnu kavramın işidir.
 Resimleri sınıflandırmayı yapay sinir ağları ile yapıyoruz. Yapay sinir ağlarını da eğitmek gerekiyor. Binlerce fotoğrafla yapay sinir ağını eğitebiliyoruz.
 Bir görüntüye birden fazla sınıf atanabilir.
 Görüntüyü verdikten sonra bize dönen çıktıda sınıf adı ve tahmin oranı olur. (0 ile 1 arasında)
+Görüntünün bütününde bir çıkarımda bulunuruz.

@@ -1,0 +1,8 @@
+    OBJECT DETECTION // Nesne Tanıma
+Görseldeki nesnenin yerini belirlemektir.
+Hem görüntünün bütününde bir çıkarımda bulunup nesneyi tespit ederiz.
+
+Nesneleri nasıl veri kümesi ile tanıtıyoruz ? Veri kümesi nedir ?
+veri kümesi resmini incele. her satırın dördü koordinatları temsil eder. ilk sayı ise o nesnenin ne olduğunu.
+
+Koordinatlar sol üstten başlar. sağa doğru x, aşağı doğru y artar.
