@@ -1,7 +1,7 @@
 import cv2
 
 """resim okuma"""
-img = cv2.imread("resim.jpg") 
+img = cv2.imread("resim.jpg") # ikinci parametre cv2.IMREAD_GRAYSCALE || 0 // resmi gri tonlarda okur
 # print(img)
 
 """yeniden boyutlanabilirliği ayarlar"""
