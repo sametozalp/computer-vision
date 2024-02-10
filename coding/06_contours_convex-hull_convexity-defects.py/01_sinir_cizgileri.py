@@ -1,6 +1,6 @@
 import cv2
 
-img = cv2.imread("coding/06_contours_convex-hull_convexity-defects.py/images/contour1.png")
+img = cv2.imread("coding/06_contours_convex-hull_convexity-defects.py/media/contour1.png")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
