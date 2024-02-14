@@ -12,3 +12,5 @@ area = cv2.contourArea(cnt) # alan bulma
 perimeter = cv2.arcLength(cnt, True) # çevreyi bulma
 
 M = cv2.moments(cnt) # map
+
+cv2.waitKey(0)
