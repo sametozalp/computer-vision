@@ -7,6 +7,10 @@ subtractor = cv2.createBackgroundSubtractorMOG2(history= 100, varThreshold= 50, 
 
 while True:
     _, frame = cap.read()
+    
+    if _ == False:
+        break
+    
     frame = cv2.resize(frame, (640, 480))
     mask = subtractor.apply(frame)
     cv2.imshow("frame", frame)
