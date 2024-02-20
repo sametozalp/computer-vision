@@ -2,16 +2,16 @@ import cv2
 import numpy as np
 import math
 
-# yüz özelliklerini kullanma // yüzü kare içerisine almak
+# el özelliklerini kullanma
 
 def findMaxCountour(contours):
     max_i = 0
     max_area = 0
     
     for i in range(len(contours)):
-        area_face = cv2.contourArea(contours[i])
-        if max_area < area_face:
-            max_area = area_face
+        area_hand = cv2.contourArea(contours[i])
+        if max_area < area_hand:
+            max_area = area_hand
             max_i = i
             
         try:
@@ -47,24 +47,21 @@ while 1:
             ext_left = tuple(c[c[:,:,0].argmin()][0])
             ext_right = tuple(c[c[:,:,0].argmax()][0])
             ext_top = tuple(c[c[:,:,1].argmin()][0])
-            ext_bottom = tuple(c[c[:,:,1].argmax()][0])
             
             cv2.circle(roi, ext_left, 5, (0,255,0),2)
             cv2.circle(roi, ext_right, 5, (0,255,0),2)
             cv2.circle(roi, ext_top, 5, (0,255,0),2)
-            cv2.circle(roi, ext_bottom, 5, (0,255,0),2)
             
             cv2.line(roi, ext_left, ext_top, (255,0,0), 2)
             cv2.line(roi, ext_top, ext_right, (255,0,0), 2)
-            cv2.line(roi, ext_right, ext_bottom, (255,0,0), 2)
-            cv2.line(roi, ext_bottom, ext_left, (255,0,0), 2)
+            cv2.line(roi, ext_right, ext_left, (255,0,0), 2)
             
             a = math.sqrt((ext_right[0] - ext_top[0])**2+(ext_right[1]-ext_top[1])**2)
-            b = math.sqrt((ext_bottom[0] - ext_right[0])**2+(ext_bottom[1]-ext_top[1])**2)
-            c = math.sqrt((ext_bottom[0] - ext_top[0])**2+(ext_bottom[1]-ext_top[1])**2)
+            b = math.sqrt((ext_right[0] - ext_left[0])**2+(ext_right[1]-ext_left[1])**2)
+            c = math.sqrt((ext_top[0] - ext_left[0])**2+(ext_top[1] - ext_left[1])**2)
             
             try:
-                angle = math.acos((a**2+b**2-c**2)/(2*b*c))*57
+                angle = math.acos((a**2+b**2-c**2)/(2*b*c))*57 # açı
                 cv2.putText(roi, str(angle), (ext_right[0]-10, ext_right[1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2, cv2.LINE_AA)
             except:
                 cv2.putText(roi, "?", (ext_right[0]-10, ext_right[1]), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2, cv2.LINE_AA)
